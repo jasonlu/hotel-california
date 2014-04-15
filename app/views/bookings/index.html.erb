@@ -1,0 +1,18 @@
+<h1>Select check-in date</h1>
+<%= form_tag new_booking_path, method: "get", :class => "form-inline welcome row col-sm-10 col-sm-offset-1" %>
+  <div class="col-sm-6">
+    <label class="" for="checkin">Check-In</label><br>
+    <input type="date" class="form-control" id="checkin" name="checkin">
+  </div>
+  <div class="col-sm-6">
+    <label class="" for="checkout">Check-Out</label><br>
+    <input type="date" class="form-control" id="checkout" name="checkout">
+  </div>
+  <div class="clearfix"></div>
+  <div class="col-sm-6 col-sm-offset-6">
+    <button type="submit" class="btn btn-primary pull-right" >Find me a room</button>
+  </div>
+
+</form>
+<div class="clearfix"></div>
+

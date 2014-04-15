@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @visit.customer %>
+</p>
+
+<p>
+  <strong>People:</strong>
+  <%= @visit.people %>
+</p>
+
+<p>
+  <strong>Should checkin at:</strong>
+  <%= @visit.should_checkin_at %>
+</p>
+
+<p>
+  <strong>Should checkout at:</strong>
+  <%= @visit.should_checkout_at %>
+</p>
+
+<%= link_to 'Edit', edit_visit_path(@visit) %> |
+<%= link_to 'Back', visits_path %>

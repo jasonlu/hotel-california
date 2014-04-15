@@ -1,0 +1,21 @@
+<h1>Select room type</h1>
+<% if @rooms.length > 0 %>
+  <% @rooms.each do |rt| %>
+    <%= link_to guests_info_path(:room_type => rt.room_type_id, :checkin => params[:checkin], :checkout => params[:checkout]), :class => "col-sm-4" do %>
+    <div class="room-type-block">
+      <h5><%=rt.name %></h5>
+      <img src="<%= rt.room_type.photo_url %>" alt="">
+      <h5 class="rate">$<%= rt.room_type.base_rate %></h5>
+      <dl>
+        <dt>Beds</dt>
+        <dd><%= rt.room_type.beds %> <%= rt.room_type.bed_type %> bed(s)</dd>
+      </dl>
+    </div>
+    <% end %>
+  <% end %>
+<% else %>
+<p class="alert alert-warning">
+  No room avalible in given time period. <%= link_to "Select a different period", start_page_path %>
+</p>
+<% end %>
+<div class="clearfix"></div>

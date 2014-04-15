@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 
+  visit_id: 
+  method: MyString
+  credit_card_no: MyString
+  paid: false
+  paid_at: 2014-03-25 18:20:06
+
+two:
+  customer_id: 
+  visit_id: 
+  method: MyString
+  credit_card_no: MyString
+  paid: false
+  paid_at: 2014-03-25 18:20:06

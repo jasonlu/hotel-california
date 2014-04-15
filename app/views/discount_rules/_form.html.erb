@@ -1,0 +1,29 @@
+<%= form_for(@discount_rule) do |f| %>
+  <% if @discount_rule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@discount_rule.errors.count, "error") %> prohibited this discount_rule from being saved:</h2>
+
+      <ul>
+      <% @discount_rule.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rules %><br>
+    <%= f.text_field :rules %>
+  </div>
+  <div class="field">
+    <%= f.label :percentage_rate %><br>
+    <%= f.text_field :percentage_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :fixed_rate %><br>
+    <%= f.text_field :fixed_rate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

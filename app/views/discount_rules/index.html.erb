@@ -1,0 +1,31 @@
+<h1>Listing discount_rules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rules</th>
+      <th>Percentage rate</th>
+      <th>Fixed rate</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @discount_rules.each do |discount_rule| %>
+      <tr>
+        <td><%= discount_rule.rules %></td>
+        <td><%= discount_rule.percentage_rate %></td>
+        <td><%= discount_rule.fixed_rate %></td>
+        <td><%= link_to 'Show', discount_rule %></td>
+        <td><%= link_to 'Edit', edit_discount_rule_path(discount_rule) %></td>
+        <td><%= link_to 'Destroy', discount_rule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Discount rule', new_discount_rule_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 
+  people: 1
+  should_checkin_at: 2014-03-25 18:14:24
+  should_checkout_at: 2014-03-25 18:14:24
+
+two:
+  customer_id: 
+  people: 1
+  should_checkin_at: 2014-03-25 18:14:24
+  should_checkout_at: 2014-03-25 18:14:24

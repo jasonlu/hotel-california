@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rules:</strong>
+  <%= @discount_rule.rules %>
+</p>
+
+<p>
+  <strong>Percentage rate:</strong>
+  <%= @discount_rule.percentage_rate %>
+</p>
+
+<p>
+  <strong>Fixed rate:</strong>
+  <%= @discount_rule.fixed_rate %>
+</p>
+
+<%= link_to 'Edit', edit_discount_rule_path(@discount_rule) %> |
+<%= link_to 'Back', discount_rules_path %>

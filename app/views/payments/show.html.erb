@@ -1,0 +1,30 @@
+<h1>Reservation Informaiton</h1>
+
+<h3>Customer:</h3>
+<h4 class="text-center">
+  <%= @payment.customer.guest.fullname %>
+</h4>
+
+<h4 class="text-center">
+  Check-in: <%= @payment.visit.occupancies.first.date %> ~
+  Check-out: <%= @payment.visit.occupancies.last.date + 1 %>
+</h4>
+<h3>Details</h3>
+<div class="alert alert-info">
+  <ul>
+    <li>Room type: <%= @payment.visit.room.room_type.name %></li>
+    <li>Check-in date: <%= @payment.visit.occupancies.first.date %></li>
+    <li>Check-out date: <%= @payment.visit.occupancies.last.date + 1 %></li>
+    <li>Price: <%= @payment.price %></li>
+  </ul>
+</div>
+
+<h3>Ordered at:</h3>
+<p>
+  <%= @payment.created_at.localtime %>
+</p>
+
+<div class="actions pull-right">
+<button class="btn btn-primary printme" onclick="window.print()">Print</button>
+or <%= link_to 'Back to start page', root_path %>
+</div>

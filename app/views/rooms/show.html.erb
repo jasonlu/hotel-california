@@ -1,0 +1,44 @@
+<div class="page-header">
+  <%= link_to rooms_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_room_path(@room), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show room</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Room number:</dt>
+  <dd><%= @room.room_number %></dd>
+
+  <dt>Room type:</dt>
+  <dd><%= @room.room_type_id %></dd>
+
+  <dt>Bed type:</dt>
+  <dd><%= @room.bed_type %></dd>
+
+  <dt>Base rate:</dt>
+  <dd><%= @room.base_rate %></dd>
+
+  <dt>Non smoking:</dt>
+  <dd><%= @room.non_smoking %></dd>
+
+  <dt>Pets welcome:</dt>
+  <dd><%= @room.pets_welcome %></dd>
+
+  <dt>Family welcome:</dt>
+  <dd><%= @room.family_welcome %></dd>
+
+  <dt>Beds:</dt>
+  <dd><%= @room.beds %></dd>
+
+  <dt>Tags:</dt>
+  <dd><%= @room.tags %></dd>
+
+  <dt>Capacity:</dt>
+  <dd><%= @room.capacity %></dd>
+
+</dl>

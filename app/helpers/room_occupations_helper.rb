@@ -1,0 +1,2 @@
+module RoomOccupationsHelper
+end

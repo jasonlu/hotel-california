@@ -1,0 +1,57 @@
+// Place all the styles related to the bookings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#bookings {
+  form.welcome {
+    border-radius: 10px;
+    background: $color2;
+    padding: 10px;
+    input[type=date] {
+      width:100%;
+    }
+    button[type=submit] {
+      margin-top: 10px;
+      background: $color1;
+      &:hover {
+        background: $color4;
+        color: $color1;
+      }
+    }
+  }
+  .room-type-block {
+    border-radius: 15px;
+    background: $color4;
+    padding: 10px;
+    color: $color1;
+    margin: 5px;
+    -webkit-animation: leavehover 0.5s forwards;
+    img {
+      width: 100%;
+    }
+    &:hover {
+      -webkit-animation: dohover 0.5s forwards;
+      // -webkit-animation-fill-mode: forwards;
+    }
+  }
+  @media all and (min-width: 768px){
+    .login-or-newuser {
+      min-height: 600px;
+      background: url(/img/bg-login-or-newuser.png) no-repeat center center;
+    }
+  }
+}
+
+@-webkit-keyframes dohover {
+  to {
+    background: $color1;
+    color: $color4;
+  }
+}
+
+@-webkit-keyframes leavehover {
+  to {
+    background: $color4;
+    color: $color1;
+  }
+}

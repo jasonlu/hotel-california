@@ -1,0 +1,33 @@
+<h1>Listing room_occupations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Booking</th>
+      <th>Start at</th>
+      <th>End at</th>
+      <th>Days</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @room_occupations.each do |room_occupation| %>
+      <tr>
+        <td><%= room_occupation.booking_id %></td>
+        <td><%= room_occupation.start_at %></td>
+        <td><%= room_occupation.end_at %></td>
+        <td><%= room_occupation.days %></td>
+        <td><%= link_to 'Show', room_occupation %></td>
+        <td><%= link_to 'Edit', edit_room_occupation_path(room_occupation) %></td>
+        <td><%= link_to 'Destroy', room_occupation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Room occupation', new_room_occupation_path %>
